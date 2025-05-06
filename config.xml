@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Enviroment>
+    <url>https://demoqa.com/login</url>
+    <userName>ToviChervonitz</userName>
+    <password>Tovi@2004</password>
+    <searchBox1>git Pocket</searchBox1>
+    <searchBox2>VeriSoft</searchBox2>
+</Enviroment>

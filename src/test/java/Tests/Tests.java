@@ -1,8 +1,10 @@
 package Tests;
 
+import Flows.BookFlow;
 import Flows.BookStoreFlow;
 import Flows.HomeFlow;
 import Flows.LoginFlow;
+import PageObject.Book;
 import PageObject.HomePage;
 import Utils.Base;
 
@@ -40,6 +42,19 @@ public class Tests extends Base {
         assertEquals(driver.findElement(By.className("rt-noData")).getText(),"No rows found");
     }
 
+    @Test(priority = 5)
+    public void fillArrayBooks(){
+        BookStoreFlow.clearSearch();
+        driver.navigate().refresh();
+        books = new Book[driver.findElements(By.className("mr-2")).size()];
+        BookFlow.fillBooksArray(driver.findElements(By.className("rt-tr-group")));
+    }
 
+    @Test(priority = 6)
+    public void printAllBooks(){
+        for(Book book : books){
+            BookFlow.printBook(book);
+        }
+    }
 
 }

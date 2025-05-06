@@ -1,5 +1,6 @@
 package Utils;
 
+import PageObject.Book;
 import PageObject.BookStorePage;
 import PageObject.HomePage;
 import PageObject.LoginPage;
@@ -23,7 +24,7 @@ public class Base {
     protected static LoginPage loginPage;
     protected static HomePage homePage;
     protected static BookStorePage bookStorePage;
-
+    protected static Book[] books;
 
     @BeforeClass
     public void startSession(){
